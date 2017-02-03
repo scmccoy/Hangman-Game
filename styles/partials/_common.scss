@@ -1,0 +1,153 @@
+body {
+    background: $lightGrey;
+    color: #000;
+}
+
+main {
+    display: flex;
+    justify-content: center;;
+    margin: 1rem auto;
+    width: 90%;
+}
+
+header {
+    background: #000;
+    display: block;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+h1 {
+    color: #eee;
+    font-size: 2.5rem;
+    padding-left: 4rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    display: block;
+    font-size: 2em;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.content-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: 10px;
+  width: 100%;
+}
+
+.words-side {
+  background: $lightGrey;
+  border: 1px solid $darkGrey;
+  padding: 15px;
+  width: 65%;
+}
+
+.letters-picked {
+  background: $medGrey;
+  border: 1px solid $darkGrey;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 10px;
+  padding: 15px;
+  width: 95%;
+
+}
+.display-letters {
+  color: $offWhite;
+  font-size: 30px;
+  letter-spacing: 5px;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.guess-words {
+  margin: 25px 10px;
+}
+
+.guess-here {
+  width: 100%;
+}
+
+.guess-show {
+  color: $offWhite;
+  font-size: 29px;
+  letter-spacing: 1px;
+  margin: 0 2px;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.indie-letters-hidden {
+  background: $lightGrey;
+  border-bottom: 3px solid $pink;
+  color: $lightGrey;
+  font-size: 29px;
+  letter-spacing: 1px;
+  margin: 0 2px;
+  padding: 10px;
+  text-transform: uppercase;
+  user-select: none; // prevent cheating :)  previously you could highlight the text because i am just
+  // hiding it by using same background color as element/body.
+}
+.show-letter {
+  color: $offWhite;
+
+}
+
+.hangman-side {
+  background: $lightGrey;
+  border: 1px solid $darkGrey;
+  padding: 15px;
+  width: 30%;
+  position: relative;
+}
+
+.turn-label {
+  bottom: 70px;
+  left: 5px;
+  position: absolute;
+}
+
+.turn-counter {
+  background: $medGrey;
+  border-top: 1px solid $darkGrey;
+  bottom: 0;
+  color: $pink;
+  font-size: 33px;
+  font-weight: 600;
+  height: 65px;
+  left: 0;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.end-times {
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  width: 100%;
+}
+
+
+.end-times p {
+  color: $pink;
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.scale-me {
+    transition: all 3s ease;
+    transform: scale(3);
+}

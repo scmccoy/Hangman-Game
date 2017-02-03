@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>AJAX / Hangman</title>
+    <link rel="stylesheet" href="styles/app.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Hangman</h1>
+        </header>
+        <main>
+            <section class="content-container">
+                <div class="words-side">
+                    <div class="letters-picked">
+                        <p>Letters picked: <span class="display-letters"></span></p>
+                    </div>
+                    <div class="guess-words">
+                        <p>Guess: <span class="guess-here"></span></p>
+                    </div>
+                    <form class="form-container">
+                        <label>Choose a Letter (A - Z)</label>
+                        <input type="text" maxlength="1" pattern="A-Za-z" name="wordPicker" id="inputPart" value="" tabindex="1">
+                        <input class="buttonPart" type="submit" value="Submit">
+                    </form>
+                </div>
+                <div class="hangman-side">
+                    <p>Hangman here</p>
+                    <span class="turn-label">Turns</span>
+                    <div class="turn-counter"></div>
+                </div>
+                <div class="end-times">
+                    <p></p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
