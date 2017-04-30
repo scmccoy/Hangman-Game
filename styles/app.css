@@ -180,9 +180,8 @@ h2 {
   border: 1px solid #464646;
   display: flex;
   flex-flow: row wrap;
-  margin: 10px;
   padding: 15px;
-  width: 95%; }
+  width: 100%; }
 
 .display-letters {
   color: #fcfad0;
@@ -259,6 +258,28 @@ h2 {
 .scale-me {
   transition: all 3s ease;
   transform: scale(3); }
+
+.head {
+  fill: #a1a194;
+  stroke: #a1a194; }
+
+.body {
+  stroke: #a1a194; }
+
+.leg-left {
+  stroke: #a1a194; }
+
+.leg-right {
+  stroke: #a1a194; }
+
+.arm-left {
+  stroke: #a1a194; }
+
+.arm-right {
+  stroke: #a1a194; }
+
+.show-hangman {
+  stroke: #000; }
 
 .has-spacer:after {
   background: #333;

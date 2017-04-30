@@ -2,42 +2,50 @@
 <html lang="en">
 
 <head>
-    <title>AJAX / Hangman</title>
-    <link rel="stylesheet" href="styles/app.css">
+  <title>AJAX / Hangman</title>
+  <link rel="stylesheet" href="styles/app.css">
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1>Hangman</h1>
-        </header>
-        <main>
-            <section class="content-container">
-                <div class="words-side">
-                    <div class="letters-picked">
-                        <p>Letters picked: <span class="display-letters"></span></p>
-                    </div>
-                    <div class="guess-words">
-                        <p>Guess: <span class="guess-here"></span></p>
-                    </div>
-                    <form class="form-container">
-                        <label>Choose a Letter (A - Z)</label>
-                        <input type="text" maxlength="1" pattern="A-Za-z" name="wordPicker" id="inputPart" value="" tabindex="1">
-                        <input class="buttonPart" type="submit" value="Submit">
-                    </form>
-                </div>
-                <div class="hangman-side">
-                    <p>Hangman here</p>
-                    <span class="turn-label">Turns</span>
-                    <div class="turn-counter"></div>
-                </div>
-                <div class="end-times">
-                    <p></p>
-                </div>
-            </section>
-        </main>
-    </div>
-    <script src="js/app.js"></script>
+  <div class="container">
+    <header>
+      <h1>Hangman</h1>
+    </header>
+    <main>
+      <section class="content-container">
+        <div class="words-side">
+          <div class="letters-picked">
+            <p>Letters picked: <span class="display-letters"></span></p>
+          </div>
+          <div class="guess-words">
+            <p>Guess: <span class="guess-here"></span></p>
+          </div>
+          <form class="form-container">
+            <label>Choose a Letter (A - Z)</label>
+            <input type="text" maxlength="1" pattern="A-Za-z" name="wordPicker" id="inputPart" value="" tabindex="1">
+            <input class="buttonPart" type="submit" value="Submit">
+          </form>
+        </div>
+        <div class="hangman-side">
+          <p>Hangman</p>
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="150px" height="300px" viewBox="0 0 150 300" enable-background="new 0 0 150 300" xml:space="preserve">
+            <line class="arm-left" fill="none" stroke="#000000" stroke-width="8" stroke-miterlimit="10" x1="70.014" y1="126.375" x2="42.931" y2="154"/>
+            <line class="arm-right" fill="none" stroke="#000000" stroke-width="8" stroke-miterlimit="10" x1="70.014" y1="126.375" x2="103.694" y2="154"/>
+            <line class="body" fill="none" stroke="#000000" stroke-width="8" stroke-miterlimit="10" x1="70" y1="107" x2="70" y2="201"/>
+            <ellipse class="head" stroke="#000000" stroke-width="8" stroke-miterlimit="10" cx="70.014" cy="67.694" rx="42.014" ry="39.583"/>
+            <line class="leg-left" fill="none" stroke="#000000" stroke-width="8" stroke-miterlimit="10" x1="70" y1="197.208" x2="34.597" y2="267.348"/>
+            <line class="leg-right" fill="none" stroke="#000000" stroke-width="8" stroke-miterlimit="10" x1="70" y1="197.208" x2="106.473" y2="267.348"/>
+          </svg>
+          <span class="turn-label">Turns</span>
+          <div class="turn-counter"></div>
+        </div>
+        <div class="end-times">
+          <p></p>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="js/app.js"></script>
 </body>
 
 </html>

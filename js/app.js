@@ -22,6 +22,13 @@
     let timer = null;
     let audio = new Audio('./audio/LTTP_Link_Fall.wav'); // will play audio on wrong guess
     let scaler = document.querySelector('.end-times');
+    // Hangman parts
+    let hangmanHead = document.querySelector('.head');
+    let hangmanBody = document.querySelector('.body');
+    let hangmanArmLeft = document.querySelector('.arm-left');
+    let hangmanArmRight = document.querySelector('.arm-right');
+    let hangmanLegLeft = document.querySelector('.leg-left');
+    let hangmanLegRight = document.querySelector('.leg-right');
 
     ///////////////////////////////////////////
     // FUNCTION : CHECK INPUT LETTER VS WORD
@@ -30,8 +37,9 @@
       let checker = entryArray.indexOf(choosenLetter);
       if (checker < 0) { // uses IndxOf method to determine if in array // false only returns -1
         correctGuess = false;
-        audio.play(); // will play audio on wrong guess - womp womp woooommmmpppp
+        //audio.play(); // will play audio on wrong guess - womp womp woooommmmpppp
         turns += 1;
+        addParts();
       }
       if (checker >= 0) { // could be else i suppose // true is 0+, not just 0. need to look into
         correctGuess = true;
@@ -111,6 +119,29 @@
         setTimeout(function() { // 3 sec restart
           location.reload();
         }, 3000);
+      }
+    }
+    ///////////////////////////////////////////
+    // FUNCTION : HANGMAN PROGRESS (SVG)
+    ///////////////////////////////////////////
+    function addParts() {
+      if (turns === 1) {
+        hangmanHead.classList.add('show-hangman');
+      }
+      if (turns === 2) {
+        hangmanBody.classList.add('show-hangman');
+      }
+      if (turns === 3) {
+        hangmanArmLeft.classList.add('show-hangman');
+      }
+      if (turns === 4) {
+        hangmanArmRight.classList.add('show-hangman');
+      }
+      if (turns === 5) {
+        hangmanLegLeft.classList.add('show-hangman');
+      }
+      if (turns === 6) {
+        hangmanLegRight.classList.add('show-hangman');
       }
     }
 
