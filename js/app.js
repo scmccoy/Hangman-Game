@@ -57,8 +57,7 @@
       let randomGen = Math.floor(Math.random() * 100);
       currentWord = exWordCatcher[randomGen].content.toLowerCase();
 
-      if (Object.keys(currentWord).length > 3) { // Carter mentioned you can do 'currentWord.lenght'. haven't tested that
-      }
+      if (Object.keys(currentWord).length > 3) {}
       displayWord(currentWord);
     }
 
@@ -90,7 +89,6 @@
         choosenLetter = playerInput.value.toLowerCase();
         // new checker to see if you pick the same letter twice.
         let checker = choosenLetters.indexOf(choosenLetter);
-
         if (checker < 0) { //
           choosenLetters.push(choosenLetter);
         }

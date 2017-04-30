@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Inconsolata:400,700");
 a,
 abbr,
 acronym,
@@ -174,6 +175,9 @@ h2 {
   border: 1px solid #464646;
   padding: 15px;
   width: 65%; }
+  @media screen and (max-width: 550px) {
+    .words-side {
+      width: 100%; } }
 
 .letters-picked {
   background: #5b605f;
@@ -191,7 +195,8 @@ h2 {
   text-transform: uppercase; }
 
 .guess-words {
-  margin: 25px 10px; }
+  margin: 25px 10px;
+  min-height: 100px; }
 
 .guess-here {
   width: 100%; }
@@ -205,10 +210,11 @@ h2 {
   text-transform: uppercase; }
 
 .indie-letters-hidden {
+  font-family: "Inconsolata", monospace;
   background: #a1a194;
   border-bottom: 3px solid #a90641;
   color: #a1a194;
-  font-size: 29px;
+  font-size: 42px;
   letter-spacing: 1px;
   margin: 0 2px;
   padding: 10px;
@@ -218,12 +224,35 @@ h2 {
 .show-letter {
   color: #fcfad0; }
 
+.form-input-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px; }
+
+input[type="text"] {
+  background-color: #fcfad0;
+  font-size: 40px;
+  text-align: center; }
+
+input.buttonPart {
+  font-size: 30px;
+  margin-left: 10px;
+  padding: 5px; }
+
 .hangman-side {
+  align-items: center;
   background: #a1a194;
   border: 1px solid #464646;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 15px;
-  width: 30%;
-  position: relative; }
+  position: relative;
+  width: 30%; }
+  @media screen and (max-width: 550px) {
+    .hangman-side {
+      margin-top: 15px;
+      width: 100%; } }
 
 .turn-label {
   bottom: 70px;
@@ -234,7 +263,7 @@ h2 {
   background: #5b605f;
   border-top: 1px solid #464646;
   bottom: 0;
-  color: #a90641;
+  color: #fcfad0;
   font-size: 33px;
   font-weight: 600;
   height: 65px;
