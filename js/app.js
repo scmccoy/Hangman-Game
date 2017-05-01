@@ -82,7 +82,7 @@
     // FUNCTION : GET INPUT FROM PLAYER
     ///////////////////////////////////////////
     function getInput() {
-      buttonSub.addEventListener('click', () => {
+      buttonSub.addEventListener('click', (event) => {
         event.preventDefault();
 
         choosenLetter = playerInput.value.toLowerCase();
@@ -157,7 +157,7 @@
     // FUNCTION : WINNING
     ///////////////////////////////////////////
     function winning() {
-      console.log(currentWord);
+
       // this awesome filter method will compare my currentword split into (entryArray) to my array of user guesses(choosenLetters)
       // the filter will remove correct guesses from my entryArray - so if all were guessed, you win.
       // figuring out how to declare a win was tougher than i thought, so this option worked great!
