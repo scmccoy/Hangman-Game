@@ -2,22 +2,22 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700');
 
 body {
-    background: $lightGrey;
-    color: #000;
+  background: $lightGrey;
+  color: #000;
 }
 
 main {
-    display: flex;
-    justify-content: center;;
-    margin: 1rem auto;
-    width: 90%;
+  display: flex;
+  justify-content: center;;
+  margin: 1rem auto;
+  width: 90%;
 }
 
 header {
-    background: #000;
-    display: block;
-    padding: 1rem 0;
-    width: 100%;
+  background: #000;
+  display: block;
+  padding: 1rem 0;
+  width: 100%;
 }
 
 p {
@@ -27,17 +27,17 @@ p {
 }
 
 h1 {
-    color: #eee;
-    font-size: 2.5rem;
-    padding-left: 4rem;
-    text-transform: uppercase;
+  color: #eee;
+  font-size: 2.5rem;
+  padding-left: 4rem;
+  text-transform: uppercase;
 }
 
 h2 {
-    display: block;
-    font-size: 2em;
-    margin-bottom: 1rem;
-    width: 100%;
+  display: block;
+  font-size: 2em;
+  margin-bottom: 1rem;
+  width: 100%;
 }
 
 .content-container {
@@ -54,7 +54,7 @@ h2 {
   padding: 15px;
   width: 65%;
   @include bp(small) {
-  width: 100%;
+    width: 100%;
   }
 }
 
@@ -117,9 +117,9 @@ h2 {
   border-radius: 5px;
 }
 input[type="text"] {
-    background-color: $offWhite;
-    font-size:40px;
-    text-align: center;
+  background-color: $offWhite;
+  font-size:40px;
+  text-align: center;
 }
 input.buttonPart {
   font-size: 30px;
@@ -159,6 +159,7 @@ input.buttonPart {
   font-weight: 600;
   height: 65px;
   left: 0;
+  max-width: 100%;
   padding: 10px;
   position: absolute;
   text-align: center;
@@ -180,6 +181,6 @@ input.buttonPart {
 }
 
 .scale-me {
-    transition: all 3s ease;
-    transform: scale(3);
+  transition: all 3s ease;
+  transform: scale(3);
 }

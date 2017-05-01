@@ -81,7 +81,6 @@
     ///////////////////////////////////////////
     // FUNCTION : GET INPUT FROM PLAYER
     ///////////////////////////////////////////
-
     function getInput() {
       buttonSub.addEventListener('click', () => {
         event.preventDefault();
@@ -95,9 +94,7 @@
         if (checker >= 0) { //
           alert('You already choose that letter!');
         }
-
         playerInput.value = '';
-        // display input --> into 'Letters Picked:' html -- using array works pretty good?
         displayLettersPicked.textContent = choosenLetters;
         checkLetters(choosenLetter);
       });
@@ -160,13 +157,14 @@
     // FUNCTION : WINNING
     ///////////////////////////////////////////
     function winning() {
+      console.log(currentWord);
       // this awesome filter method will compare my currentword split into (entryArray) to my array of user guesses(choosenLetters)
       // the filter will remove correct guesses from my entryArray - so if all were guessed, you win.
       // figuring out how to declare a win was tougher than i thought, so this option worked great!
       compareArrays = compareArrays.filter(val => !choosenLetters.includes(val));
       if (compareArrays.length === 0) {
         scaler.classList.add('scale-me');
-        turnContainer.textContent = 'Y O U  W I N!';
+        turnContainer.textContent = `${currentWord.toUpperCase()}`;
         letterSpots.textContent = currentWord;
         setTimeout(function() {
           location.reload();
